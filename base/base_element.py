@@ -26,3 +26,9 @@ class BaseElement:
         except TimeoutException:
             self.logger.warning("Элемент не найден")
 
+    def wait_element(self):
+        try:
+            element = WebDriverWait(Browser().get_instance(), self.timeout).until(
+                EC.presence_of_element_located((self.method, self.locator)))
+        except TimeoutException:
+            self.logger.warning("Элемент не найден")

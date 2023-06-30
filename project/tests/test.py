@@ -44,7 +44,6 @@ def test(set_up):
         random_text), f'Permanent address full name не соответствует ожидаемому.Ожидаемое значение: {random_text}, актуальное значение: {permanent_address_actual_value}'
 
     element_page.click_button_element()
-    time.sleep(1)
     alerts_frame_windows_page.alerts_frame_windows_click()
     alerts_frame_windows_page.select_browser_window_from_list()
 
